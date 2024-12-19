@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { UserPlus } from "@phosphor-icons/react";
+
 
 import { Card } from "../../components/Card";
 import { Header } from "../../components/Header";
 
 import styles from "./Home.module.css";
+import { Button } from "../../components/Button";
 
 type StudentType = {
   nome: string;
@@ -35,11 +36,7 @@ export function Home() {
           value={name}
         />
 
-        <button onClick={handleAddStudent}>
-          Cadastrar estudante
-
-          <UserPlus color="#fff" weight="fill" size={24}/>
-        </button>
+        <Button  addStudent={handleAddStudent} />
       </div>
 
       <div className={styles.containerCard}>
