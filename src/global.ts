@@ -8,8 +8,8 @@ export const GlobalEstilos = createGlobalStyle`
 }
 
 body{
-    background: ${(props) => props.theme.COLORS.white};
-    color: ${(props) => props.theme.COLORS.gray100};
+    background: ${(props) => props.theme.COLORS.gray100};
+    color: ${(props) => props.theme.COLORS.black};
   --webkit-font-smoothing: antialiased;
   }
 

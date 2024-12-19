@@ -5,6 +5,7 @@ type Props = {
 };
 
 export const StyledButton = styled.button<Props>`
+  margin-top: 20px;
   width: 25%;
   padding: 10px;
   font-weight: bold;

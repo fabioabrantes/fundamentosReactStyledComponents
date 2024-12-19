@@ -1,16 +1,19 @@
+//Importações
 import { useState } from "react";
 
-
+//Componentes
 import { Card } from "../../components/Card";
 import { Header } from "../../components/Header";
-
-import styles from "./Home.module.css";
 import { Button } from "../../components/Button";
+
+//Estilização
+import * as S from "./styled";
 
 type StudentType = {
   nome: string;
   hora: string;
 }
+
 export function Home() {
   const [name, setName] = useState("");
   const [students, setStudents] = useState<StudentType[]>([] as StudentType[])
@@ -26,20 +29,20 @@ export function Home() {
   }
   return (
     <>
-      <div className={styles.container}>
+      <S.Container>
         <Header titulo="Frequência dos alunos" />
 
         <input
           type="text"
           onChange={(e) => setName(e.target.value)}
-          placeholder="digite o nome do aluno."
+          placeholder="Digite o nome do aluno..."
           value={name}
         />
 
         <Button  addStudent={handleAddStudent} />
-      </div>
+      </S.Container>
 
-      <div className={styles.containerCard}>
+      <S.ContainerCard>
         {
           students.length > 0 ? (
             students.map((student, index) => (
@@ -54,7 +57,7 @@ export function Home() {
             <strong> Não existe nenhum aluno cadastrado</strong>
           )
         }
-      </div>
+      </S.ContainerCard>
     </>
   )
 }
