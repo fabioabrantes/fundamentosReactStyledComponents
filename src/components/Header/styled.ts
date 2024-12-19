@@ -7,7 +7,6 @@ export const Container = styled.header`
   margin: 84px 0 24px;
 `;
 export const Title = styled.h1`
-  font-size: 2rem; 
   font-weight: bold; 
   color: ${props=>props.theme.COLORS.black}; 
   text-align: center; 
