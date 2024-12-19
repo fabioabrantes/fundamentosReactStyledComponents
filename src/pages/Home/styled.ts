@@ -7,15 +7,17 @@ export const Container = styled.div`
   margin: 20px 20px;
   justify-content: center;
   align-items: center;
+  background-color: ${({ theme }) => theme.COLORS.gray500};
+  padding: 1rem;
+`;
 
-  input {
+export const Input = styled.input`
     width: 50%;
     padding: 24px;
     background-color: ${({ theme }) => theme.COLORS.white};
     border-radius: 5px;
-    border: 2px solid ${({ theme }) => theme.COLORS.gray900};
+    border: 2px solid ${({ theme }) => theme.COLORS.green500};
     font-size: 16px;
-  }
 `;
 
 export const ContainerCard = styled.div`
